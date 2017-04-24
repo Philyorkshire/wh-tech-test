@@ -8,7 +8,10 @@
     "gulp-cucumber": "0.0.22"
   },
   "devDependencies": {
-    "cucumber": "^2.0.0-rc.9"
+    "chai": "^3.5.0",
+    "cucumber": "^2.0.0-rc.9",
+    "fs": "0.0.1-security",
+    "selenium-webdriver": "^3.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
