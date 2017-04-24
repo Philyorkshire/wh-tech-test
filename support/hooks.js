@@ -11,6 +11,12 @@ var Hooks = function() {
             next();
         });
     });
+
+    this.registerHandler('BeforeStep', function(event, next) {
+        setTimeout(function() {
+            next();
+        }, 1000);
+    });
 };
 
 module.exports = Hooks;
