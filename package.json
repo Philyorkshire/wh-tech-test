@@ -1,0 +1,26 @@
+{
+  "name": "wh-tech-test",
+  "version": "1.0.0",
+  "description": "William Hill Technical Test",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "3.9.1",
+    "gulp-cucumber": "0.0.22"
+  },
+  "devDependencies": {
+    "cucumber": "^2.0.0-rc.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Philyorkshire/wh-tech-test.git"
+  },
+  "author": "Phillip J Marsden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Philyorkshire/wh-tech-test/issues"
+  },
+  "homepage": "https://github.com/Philyorkshire/wh-tech-test#readme"
+}
