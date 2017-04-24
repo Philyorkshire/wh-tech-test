@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chromedriver": "^2.29.0",
     "cucumber": "^2.0.0-rc.9",
     "fs": "0.0.1-security",
     "selenium-webdriver": "^3.4.0"
