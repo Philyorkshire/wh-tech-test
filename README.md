@@ -16,14 +16,7 @@ $ setup.cmd
 
 ### Run Tests
 
-Mobile configuration
 
 ```sh
-$ gulp cucumber-mobile
-```
-
-Desktop configuration
-
-```sh
-$ gulp cucumber-desktop
+$ gulp ui-tests
 ```

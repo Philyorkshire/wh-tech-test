@@ -6,6 +6,11 @@ var CONSTANTS = {
 
     FOOTBALL: {
         HOME: 'http://sports.williamhill.com/betting/en-gb/football'
+    },
+
+    credentials: {
+        username: '{redacted}',
+        password: '{redacted}'
     }
 }
 
