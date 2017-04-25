@@ -6,7 +6,7 @@ Feature: Placing a bet on football from Sportsbook Home
 Scenario Outline: Place bet on an upcoming sport
     Given I am on a <sport> event page
      When I place a <wager> bet on a match
-     Then my bet is shown in my open bets slip
+     Then my balance is less than the <wager> amount
 
 Examples:
 	| sport     | wager |

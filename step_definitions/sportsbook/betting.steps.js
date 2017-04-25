@@ -15,24 +15,12 @@ var viewModel = {
 
 module.exports = function() {
     this.World = require('../../support/world.js').World;
-    
-    this.Given(/^I am logged in$/, function(next) {
-        // Arrange
-        sportsbookPage.open();
-        sportsbookPage.login(viewModel.username, viewModel.password);
-
-        // Assert
-        driver.getCurrentUrl().then(function(url) {
-            expect(url).to.equal(CONSTANTS.HOME_ADDRESS);
-            next();
-        });
-    });
 
     this.Given(/^I am on a (.*) event page$/, function(sport, next) {
         // Act
         sportsPage.open(sport);
         sportsPage.getBalanceAmount().then(function(balanceText) {
-            viewModel.balance = parseInt(balanceText.replace('£', ''));
+            viewModel.balance = parseFloat(balanceText.replace('£', ''));
         });
 
         // Assert
@@ -51,16 +39,14 @@ module.exports = function() {
             sportsPage.placeBet(wager);
             next();
         }, 1500);
-
-        // Assert
-        sportsbookPage.getBalanceAmount().then(function(balanceText) {
-            var newBalance = parseInt(balanceText.replace('£', ''));
-            expect(newBalance).to.equal(viewModel.balance - viewModel.wager);
-        });
     });
 
-    this.Then(/^my bet is shown in my open bets slip$/, function(next) {
-        // Unable to do as the account provided does not authenticate
-        next();
+    this.Then(/^my balance is less than the (.*) amount$/, function(wager, next) {
+        sportsbookPage.getBalanceAmount().then(function(balanceText) {
+            var newBalance = parseFloat(balanceText.replace('£', ''));
+            expect(newBalance).to.equal(viewModel.balance - wager);
+
+            next();
+        });
     });
 }
