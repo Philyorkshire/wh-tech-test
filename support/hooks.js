@@ -27,7 +27,7 @@ var Hooks = function() {
     this.registerHandler('BeforeStep', function(event, next) {
         setTimeout(function() {
             next();
-        }, 1000);
+        }, 1500);
     });
 };
 

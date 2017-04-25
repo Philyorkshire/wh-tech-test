@@ -19,9 +19,6 @@ module.exports = function() {
     this.Given(/^I am on a (.*) event page$/, function(sport, next) {
         // Act
         sportsPage.open(sport);
-        sportsPage.getBalanceAmount().then(function(balanceText) {
-            viewModel.balance = parseFloat(balanceText.replace('£', ''));
-        });
 
         // Assert
         driver.getCurrentUrl().then(function(url) {
@@ -32,6 +29,9 @@ module.exports = function() {
 
     this.When(/^I place a (.*) bet on a match$/, function(wager, next) {
         // Arrange
+        sportsPage.getBalanceAmount().then(function(balanceText) {
+            viewModel.balance = parseFloat(balanceText.replace('£', ''));
+        });
         sportsPage.addSelectionToBetSlip();
 
         // Act
