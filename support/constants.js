@@ -9,8 +9,8 @@ var CONSTANTS = {
     },
 
     credentials: {
-        username: '{redacted}',
-        password: '{redacted}'
+        username: 'WHATA_FOG2',
+        password: 'F0gUaTtest'
     }
 }
 
